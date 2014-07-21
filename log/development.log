@@ -6816,3 +6816,737 @@ Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-07-21 13:50:33 +0
 
 
 Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-07-21 13:50:33 +0530
+
+
+Started GET "/tags" for 127.0.0.1 at 2014-07-21 14:20:26 +0530
+Processing by TagsController#index as HTML
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags"
+  Rendered tags/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-07-21 14:20:26 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-07-21 14:20:26 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-21 14:20:26 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-07-21 14:20:26 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-21 14:20:26 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-07-21 14:20:26 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-21 14:20:26 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-21 14:20:26 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-07-21 14:20:26 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-07-21 14:20:26 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-07-21 14:20:26 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-21 14:20:26 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPaperclipFieldsToArticle (20140721152820)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (15.4ms)[0m  [1mALTER TABLE "articles" ADD "image_file_name" varchar(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "articles" ADD "image_content_type" varchar(255)
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "articles" ADD "image_file_size" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "articles" ADD "image_updated_at" datetime
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140721152820"]]
+  [1m[35m (107.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_article_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_taggings_on_tag_id' AND type='index'
+
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-07-21 21:23:42 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 515ms (Views: 438.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-07-21 21:23:43 +0530
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-07-21 21:23:43 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-07-21 21:23:43 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-21 21:23:43 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-07-21 21:23:43 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-21 21:23:43 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-21 21:23:43 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-21 21:23:43 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-07-21 21:23:43 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-07-21 21:23:43 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-07-21 21:23:43 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-21 21:23:43 +0530
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2014-07-21 21:24:30 +0530
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (233.3ms)
+  Rendered articles/new.html.erb within layouts/application (254.0ms)
+Completed 200 OK in 291ms (Views: 288.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2014-07-21 21:25:14 +0530
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jiJSZ9w9iZ4SIEVuLS0vxrsNlWGWCPdrOfZl0t8rRX4=", "article"=>{"title"=>"Image check", "body"=>"Just uploading a small image", "tag_list"=>"image, check", "image"=>#<ActionDispatch::Http::UploadedFile:0xb1a8ab4 @tempfile=#<Tempfile:/tmp/RackMultipart20140721-5598-12pgf8x>, @original_filename="beast.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"beast.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Article"}
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'image' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-07-21 15:55:15.127399"], ["name", "image"], ["updated_at", "2014-07-21 15:55:15.127399"]]
+  [1m[35m (97.2ms)[0m  commit transaction
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'check' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-07-21 15:55:15.328934"], ["name", "check"], ["updated_at", "2014-07-21 15:55:15.328934"]]
+  [1m[35m (65.1ms)[0m  commit transaction
+Command :: file -b --mime '/tmp/b878bc127cdb631d4fea3580fccceaa020140721-5598-5u5ewo.png'
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime '/tmp/b878bc127cdb631d4fea3580fccceaa020140721-5598-nd3uz1.png'
+Binary data inserted for `string` type on column `image_content_type`
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "articles" ("body", "created_at", "image_content_type", "image_file_name", "image_file_size", "image_updated_at", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["body", "Just uploading a small image"], ["created_at", "2014-07-21 15:55:15.626670"], ["image_content_type", "image/png"], ["image_file_name", "beast.png"], ["image_file_size", 27720], ["image_updated_at", "2014-07-21 15:55:15.517075"], ["title", "Image check"], ["updated_at", "2014-07-21 15:55:15.626670"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "taggings" ("article_id", "created_at", "tag_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["article_id", 12], ["created_at", "2014-07-21 15:55:15.630662"], ["tag_id", 8], ["updated_at", "2014-07-21 15:55:15.630662"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "taggings" ("article_id", "created_at", "tag_id", "updated_at") VALUES (?, ?, ?, ?)  [["article_id", 12], ["created_at", "2014-07-21 15:55:15.632851"], ["tag_id", 9], ["updated_at", "2014-07-21 15:55:15.632851"]]
+  [1m[36m (112.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles/12
+Completed 302 Found in 824ms (ActiveRecord: 277.7ms)
+
+
+Started GET "/articles/12" for 127.0.0.1 at 2014-07-21 21:25:15 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered comments/_form.html.erb (5.7ms)
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 12]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 12]]
+  Rendered articles/_comment.html.erb (0.0ms)
+  Rendered articles/show.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 97ms (Views: 66.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-07-21 21:25:15 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-07-21 21:25:16 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-07-21 21:25:16 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-21 21:25:16 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-21 21:25:16 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-07-21 21:25:16 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-07-21 21:25:16 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-21 21:25:16 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-21 21:25:16 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-21 21:25:16 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-07-21 21:25:16 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-07-21 21:25:16 +0530
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 12]]
+
+
+Started GET "/articles/12" for 127.0.0.1 at 2014-07-21 21:28:46 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 12]]
+  Rendered comments/_form.html.erb (2.4ms)
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 12]]
+  Rendered articles/_comment.html.erb (0.0ms)
+  Rendered articles/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 29ms (Views: 24.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-07-21 21:28:46 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-07-21 21:28:46 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-07-21 21:28:46 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-07-21 21:28:46 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-21 21:28:46 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-07-21 21:28:46 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-21 21:28:46 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-21 21:28:46 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-21 21:28:46 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-21 21:28:46 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-07-21 21:28:47 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-07-21 21:28:47 +0530
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-07-21 21:33:54 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2014-07-21 21:33:55 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (3.4ms)
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 1]]
+  Rendered articles/_comment.html.erb (2.8ms)
+  Rendered articles/show.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2014-07-21 21:33:56 +0530
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ravikanth/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ravikanth/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ravikanth/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ravikanth/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/ravikanth/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.6ms)
+  Rendered /home/ravikanth/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.0ms)
+  Rendered /home/ravikanth/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (85.7ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2014-07-21 21:34:04 +0530
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 1]]
+  Rendered articles/_form.html.erb (9.1ms)
+  Rendered articles/edit.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-07-21 21:35:24 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-07-21 21:35:25 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-07-21 21:35:25 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-07-21 21:35:25 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-21 21:35:25 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-21 21:35:25 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-21 21:35:25 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-21 21:35:25 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-07-21 21:35:25 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-07-21 21:35:25 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-07-21 21:35:25 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-21 21:35:25 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-07-21 21:35:25 +0530
+
+
+Started GET "/articles/12" for 127.0.0.1 at 2014-07-21 21:35:27 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered comments/_form.html.erb (2.4ms)
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 12]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 12]]
+  Rendered articles/_comment.html.erb (0.0ms)
+  Rendered articles/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-07-21 21:35:35 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2014-07-21 21:35:37 +0530
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (5.5ms)
+  Rendered articles/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2014-07-21 21:36:36 +0530
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jiJSZ9w9iZ4SIEVuLS0vxrsNlWGWCPdrOfZl0t8rRX4=", "article"=>{"title"=>"Check: if file chosen is displayed", "body"=>"After uploading file check if image is chosen or not", "tag_list"=>"image, selectedimage", "image"=>#<ActionDispatch::Http::UploadedFile:0xb1c3c88 @tempfile=#<Tempfile:/tmp/RackMultipart20140721-5598-847qiz>, @original_filename="beast.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"beast.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Article"}
+  [1m[35mTag Load (0.3ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'image' LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'selectedimage' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags" ("created_at", "name", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-07-21 16:06:36.106088"], ["name", "selectedimage"], ["updated_at", "2014-07-21 16:06:36.106088"]]
+  [1m[35m (173.1ms)[0m  commit transaction
+Command :: file -b --mime '/tmp/b878bc127cdb631d4fea3580fccceaa020140721-5598-1lkkpeb.png'
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime '/tmp/b878bc127cdb631d4fea3580fccceaa020140721-5598-19y5qqu.png'
+Binary data inserted for `string` type on column `image_content_type`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "articles" ("body", "created_at", "image_content_type", "image_file_name", "image_file_size", "image_updated_at", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["body", "After uploading file check if image is chosen or not"], ["created_at", "2014-07-21 16:06:36.343888"], ["image_content_type", "image/png"], ["image_file_name", "beast.png"], ["image_file_size", 27720], ["image_updated_at", "2014-07-21 16:06:36.320118"], ["title", "Check: if file chosen is displayed"], ["updated_at", "2014-07-21 16:06:36.343888"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "taggings" ("article_id", "created_at", "tag_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["article_id", 13], ["created_at", "2014-07-21 16:06:36.347208"], ["tag_id", 8], ["updated_at", "2014-07-21 16:06:36.347208"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "taggings" ("article_id", "created_at", "tag_id", "updated_at") VALUES (?, ?, ?, ?)  [["article_id", 13], ["created_at", "2014-07-21 16:06:36.348897"], ["tag_id", 10], ["updated_at", "2014-07-21 16:06:36.348897"]]
+  [1m[36m (91.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles/13
+Completed 302 Found in 349ms (ActiveRecord: 266.3ms)
+
+
+Started GET "/articles/13" for 127.0.0.1 at 2014-07-21 21:36:36 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered comments/_form.html.erb (2.6ms)
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 13]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 13]]
+  Rendered articles/_comment.html.erb (0.0ms)
+  Rendered articles/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-07-21 21:36:36 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-07-21 21:36:36 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-21 21:36:36 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-07-21 21:36:36 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-07-21 21:36:36 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-21 21:36:36 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-21 21:36:36 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-07-21 21:36:36 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-21 21:36:36 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-21 21:36:36 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-07-21 21:36:36 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-07-21 21:36:36 +0530
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-07-21 21:36:44 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/9" for 127.0.0.1 at 2014-07-21 21:36:47 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 9]]
+  Rendered comments/_form.html.erb (2.4ms)
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 9]]
+  Rendered articles/_comment.html.erb (0.0ms)
+  Rendered articles/show.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2014-07-21 21:36:48 +0530
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ravikanth/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ravikanth/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ravikanth/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ravikanth/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/ravikanth/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
+  Rendered /home/ravikanth/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /home/ravikanth/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-07-21 21:37:13 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2014-07-21 21:37:14 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered comments/_form.html.erb (2.5ms)
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?[0m  [["article_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered articles/_comment.html.erb (2.1ms)
+  Rendered articles/show.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/original/missing.png" for 127.0.0.1 at 2014-07-21 21:37:14 +0530
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ravikanth/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ravikanth/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ravikanth/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ravikanth/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/ravikanth/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered /home/ravikanth/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /home/ravikanth/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (48.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2014-07-21 21:37:24 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-07-21 21:37:24 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-07-21 21:37:24 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-07-21 21:37:24 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-07-21 21:37:24 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-21 21:37:24 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-21 21:37:24 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-07-21 21:37:24 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-21 21:37:24 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-07-21 21:37:24 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-21 21:37:24 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-07-21 21:37:24 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-21 21:37:24 +0530
+
+
+Started GET "/articles/13" for 127.0.0.1 at 2014-07-21 21:37:26 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered comments/_form.html.erb (2.4ms)
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 13]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 13]]
+  Rendered articles/_comment.html.erb (0.0ms)
+  Rendered articles/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2014-07-21 21:39:51 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered articles/show.html.erb within layouts/application (27.7ms)
+Completed 500 Internal Server Error in 33ms
+
+ActionView::Template::Error (undefined local variable or method `article' for #<#<Class:0xabd0664>:0xb1ae374>):
+    1: <h1><%= @article.title %><h1>
+    2: <p>
+    3: <% if article.image.exists? %>
+    4: <%= image_tag @article.image.url%>
+    5: <% end %>
+    6: </p>
+  app/views/articles/show.html.erb:3:in `_app_views_articles_show_html_erb___1047897274_93154250'
+
+
+  Rendered /home/ravikanth/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/ravikanth/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/ravikanth/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.1ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2014-07-21 21:40:42 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (2.4ms)
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 1]]
+  Rendered articles/_comment.html.erb (2.8ms)
+  Rendered articles/show.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-07-21 21:40:42 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-07-21 21:40:42 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-07-21 21:40:42 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-21 21:40:42 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-07-21 21:40:42 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-21 21:40:42 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-21 21:40:42 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-07-21 21:40:42 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-07-21 21:40:42 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-21 21:40:42 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-07-21 21:40:42 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-21 21:40:42 +0530
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2014-07-21 21:52:20 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (2.4ms)
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."article_id" = ?  [["article_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments"  WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."article_id" = ?  [["article_id", 1]]
+  Rendered articles/_comment.html.erb (2.0ms)
+  Rendered articles/show.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 157ms (Views: 153.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2014-07-21 21:52:20 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-07-21 21:52:20 +0530
+
+
+Started GET "/assets/screen.css?body=1" for 127.0.0.1 at 2014-07-21 21:52:20 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-07-21 21:52:20 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-21 21:52:20 +0530
+
+
+Started GET "/assets/styles.css?body=1" for 127.0.0.1 at 2014-07-21 21:52:20 +0530
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2014-07-21 21:52:20 +0530
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2014-07-21 21:52:20 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-21 21:52:20 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-21 21:52:20 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-21 21:52:20 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-21 21:52:20 +0530
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2014-07-21 21:52:20 +0530
